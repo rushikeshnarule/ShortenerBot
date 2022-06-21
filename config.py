@@ -13,10 +13,10 @@ def GetVarOrNone(var):
 
 
 class Config(object):
-    APP_ID = int(os.environ.get("APP_ID", 12345))
-    API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
+    APP_ID = int(os.environ.get("APP_ID", 8143783))
+    API_HASH = os.environ.get("API_HASH", "889c67efa7cf3979acc079c3271f4254")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5233200940:AAGcRIDMCTfeG4OXcqcRZsrtlC1KqIQnRUE")
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", "DTG_Shortner_bot")
     if not BOT_USERNAME.startswith('@'): BOT_USERNAME = '@' + BOT_USERNAME # bu satıra dokunmayın.
     UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", '')
     if len(UPDATES_CHANNEL) < 2: UPDATES_CHANNEL = None
