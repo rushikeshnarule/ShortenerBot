@@ -20,7 +20,7 @@ class Config(object):
     if not BOT_USERNAME.startswith('@'): BOT_USERNAME = '@' + BOT_USERNAME # bu satıra dokunmayın.
     UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", 'https://t.me/DTG_BOTS')
     if len(UPDATES_CHANNEL) < 2: UPDATES_CHANNEL = None
-    OWNER_ID = int(os.environ.get('OWNER_ID', 0)) # give your owner id # if given 0 shell will not works
+    OWNER_ID = int(os.environ.get('OWNER_ID', 788277212)) # give your owner id # if given 0 shell will not works
     AUTH_IDS = [int(x) for x in os.environ.get("AUTH_IDS", "0").split()] # if open to everyone give 0
     AUTH_IDS.append(OWNER_ID)
     LOG_COMMAND = os.environ.get('LOG_COMMAND','log')
