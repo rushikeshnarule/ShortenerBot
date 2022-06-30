@@ -30,7 +30,7 @@ class Config(object):
 
     # shortener apis + # find better way
     
-    shortest = GetVarOrNone("shortest")
+    shortest = GetVarOrNone("d77cd9f3fd7b5a19d102c503f1acd20a")
     bcvc = GetVarOrNone("bcvc")
     pubiza = GetVarOrNone("pubiza")
     linkvertise = GetVarOrNone("linkvertise")
