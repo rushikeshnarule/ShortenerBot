@@ -34,7 +34,7 @@ def ReadableTime(seconds: int) -> str:
 class Bot(Client):
 
     def __init__(self):
-        super().__init__(
+        super().__init__( 
             name='ShortnerBot',
             api_id=Config.APP_ID,
             api_hash=Config.API_HASH,
