@@ -742,7 +742,7 @@ async def auto_filter(client, msg, spoll=False):
              )
 
     btn.append([
-                InlineKeyboardButton("🤔 How To Download ", url=f"https://youtu.be/D-jh8n8Y8PI"),
+                InlineKeyboardButton("🤔 How To Download ", url=f"https://telegram.me/DTG_TV/60"),
             ])
         
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
