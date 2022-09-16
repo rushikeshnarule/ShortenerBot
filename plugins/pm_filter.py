@@ -473,6 +473,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
+            InlineKeyboardButton('🔺 Content Updates 🔺', url='https://t.me/DTG_Movies')
+        ], [
             InlineKeyboardButton('➡️Channel', url='https://t.me/DTG_TV'),
             InlineKeyboardButton('🤖 Updates', url='https://t.me/DTG_BOTS')
         ], [
