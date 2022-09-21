@@ -746,6 +746,10 @@ async def auto_filter(client, msg, spoll=False):
     btn.append([
                 InlineKeyboardButton("🤔 How To Download ", url=f"https://telegram.me/DTG_TV/60"),
             ])
+    
+    btn.append([
+                InlineKeyboardButton("Video With Haddy Wale Chacha", url=f"https://youtu.be/6DCWkq8O8VI"),
+            ])
         
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
@@ -812,7 +816,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name. If You Want Tis Movi e Request Us at - https://t.me/+BDvuprV0ctVkOTE1")
+        k = await msg.reply("I couldn't find any movie in that name. If You Want Tis Movi e Request Us at - https://t.me/all_movie_search_bot")
         await asyncio.sleep(8)
         await k.delete()
         return
