@@ -478,6 +478,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➡️Channel', url='https://t.me/DTG_TV'),
             InlineKeyboardButton('🤖 Updates', url='https://t.me/DTG_BOTS')
         ], [
+            InlineKeyboardButton('❤️ Donate Us To Alive', callback_data='donate')
+        ], [
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
         ]]
