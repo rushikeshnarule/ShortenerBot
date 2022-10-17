@@ -750,7 +750,7 @@ async def auto_filter(client, msg, spoll=False):
             ])
     
     btn.append([
-                InlineKeyboardButton("Video With Haddy Wale Chacha", url=f"https://youtu.be/6DCWkq8O8VI"),
+                InlineKeyboardButton("Stop RummyCircle Messages", url=f"https://youtu.be/PLB-f0-CaxI"),
             ])
         
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
