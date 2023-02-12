@@ -723,7 +723,7 @@ async def auto_filter(client, msg, spoll=False):
              )
 
     btn.append([
-                InlineKeyboardButton("🤔 How To Download ", url=f"https://telegram.me/DTG_BOTS/65"),
+                InlineKeyboardButton("🤔 How To Download ", url=f"https://t.me/DTG_TV/60"),
             ])
     
     btn.append([
