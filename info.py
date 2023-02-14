@@ -67,4 +67,10 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 SHORTENER_API = environ.get("SHORTENER_API", None)
 LONG_DROPLINK_URL = environ.get("LONG_DROPLINK_URL", False)
 
+## EXTRA FEATURES
 
+     # Auto Delete For Group Message (Self Delete) #
+SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 300))
+SELF_DELETE = environ.get('SELF_DELETE', True)
+if SELF_DELETE == "True":
+    SELF_DELETE = True
