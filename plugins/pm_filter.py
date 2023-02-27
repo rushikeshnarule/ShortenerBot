@@ -9,7 +9,7 @@ import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
 from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
-    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE
+    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, IMDB_DELET_TIME
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -708,6 +708,11 @@ async def auto_filter(client, msg, spoll=False):
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
+
+        btn.append([
+                InlineKeyboardButton("pin-up-150% welcome bomus", url=f"https://tinyurl.com/35m9y9ma"),
+            ])        
+        
         btn.append(
             [InlineKeyboardButton(text=f"🗓 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
              InlineKeyboardButton(text="NEXT ⏩", callback_data=f"next_{req}_{key}_{offset}")]
@@ -718,13 +723,13 @@ async def auto_filter(client, msg, spoll=False):
              )
 
     btn.append([
-                InlineKeyboardButton("🤔 How To Download ", url=f"https://telegram.me/DTG_TV/60"),
+                InlineKeyboardButton("🤔 How To Download ", url=f"https://t.me/DTG_TV/60"),
             ])
     
     btn.append([
-                InlineKeyboardButton("Stop RummyCircle Messages", url=f"https://youtu.be/PLB-f0-CaxI"),
+                InlineKeyboardButton("Aviator: 150% welcome bomus", url=f"https://tinyurl.com/35m9y9ma"),
             ])
-        
+                
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     if imdb:
@@ -760,23 +765,28 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap =  f"📂 Results For ➠ {search} \n\n👉🏻JOIN @DTG_TV For download Media File \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Type Only Movie Name With Correct Spelling.✍️\n➠ Add Year For Better Result and don't add movie or series words in qurey🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n "
     if imdb and imdb.get('poster'):
         try:
-          a = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
+            hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
-          await asyncio.sleep(300)
-          await message.delete()
-          await a.delete()
+            await asyncio.sleep(IMDB_DELET_TIME)
+            await hehe.delete() 
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            hmm = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(IMDB_DELET_TIME)
+            await hmm.delete() 
         except Exception as e:
             logger.exception(e)
-            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            fek = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(IMDB_DELET_TIME)
+            await fek.delete()
     else:
-        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        fuk = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(IMDB_DELET_TIME)
+        await fuk.delete()        
     if spoll:
         await msg.message.delete()
 

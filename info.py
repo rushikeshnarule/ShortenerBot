@@ -66,3 +66,6 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 
 SHORTENER_API = environ.get("SHORTENER_API", None)
 LONG_DROPLINK_URL = environ.get("LONG_DROPLINK_URL", False)
+
+## EXTRA FEATURES
+IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "300"))
