@@ -450,10 +450,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔺 Content Updates 🔺', url='https://t.me/DTG_Movies')
+            InlineKeyboardButton('🔺 Content Updates 🔺', url='https://t.me/rockstarstudiozrs')
         ], [
-            InlineKeyboardButton('➡️Channel', url='https://t.me/DTG_TV'),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/DTG_BOTS')
+            InlineKeyboardButton('➡️Channel', url='https://t.me/+1C7aIhAPyXc4ZTM1'),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/rockstarstudiozrs')
         ], [
             InlineKeyboardButton('❤️ Donate Us To Alive', callback_data='donate')
         ], [
@@ -486,8 +486,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/DTG_BOTS'),
-            InlineKeyboardButton('♥️ Source', url='https://t.me/DTG_TV')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/rockstarstudiozrs'),
+            InlineKeyboardButton('♥️ Source', url='https://t.me/rockstarstudioz')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('🔐 Close', callback_data='close_data')
@@ -710,7 +710,7 @@ async def auto_filter(client, msg, spoll=False):
         req = message.from_user.id if message.from_user else 0
 
         btn.append([
-                InlineKeyboardButton("pin-up-150% welcome bomus", url=f"https://tinyurl.com/35m9y9ma"),
+                InlineKeyboardButton("Youtube channel", url=f"https://www.youtube.com/channel/UCr9dKjtvbLz4aMgsd_bYLtg"),
             ])        
         
         btn.append(
@@ -723,12 +723,10 @@ async def auto_filter(client, msg, spoll=False):
              )
 
     btn.append([
-                InlineKeyboardButton("🤔 How To Download ", url=f"https://t.me/DTG_TV/60"),
+                InlineKeyboardButton("🤔 How To Download ", url=f"https://www.youtube.com/channel/UCr9dKjtvbLz4aMgsd_bYLtg"),
             ])
     
-    btn.append([
-                InlineKeyboardButton("Aviator: 150% welcome bomus", url=f"https://tinyurl.com/35m9y9ma"),
-            ])
+  
                 
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
@@ -765,7 +763,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap =  f"📂 Results For ➠ {search} \n\n👉🏻JOIN @DTG_TV For download Media File \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Type Only Movie Name With Correct Spelling.✍️\n➠ Add Year For Better Result and don't add movie or series words in qurey🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n "
+        cap =  f"📂 Results For ➠ {search} \n\n👉🏻JOIN @rocktarstudozrs For download Media File \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Type Only Movie Name With Correct Spelling.✍️\n➠ Add Year For Better Result and don't add movie or series words in qurey🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n "
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
