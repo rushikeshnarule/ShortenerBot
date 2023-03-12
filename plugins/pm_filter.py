@@ -723,7 +723,7 @@ async def auto_filter(client, msg, spoll=False):
              )
 
     btn.append([
-                InlineKeyboardButton("🤔 How To Download ", url=f"https://www.youtube.com/channel/UCr9dKjtvbLz4aMgsd_bYLtg"),
+                InlineKeyboardButton("🤔 How To Download ", url=f"https://t.me/rockstarstudiozrs/49"),
             ])
     
   
@@ -763,7 +763,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap =  f"📂 Results For ➠ {search} \n\n👉🏻JOIN @rocktarstudozrs For download Media File \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Type Only Movie Name With Correct Spelling.✍️\n➠ Add Year For Better Result and don't add movie or series words in qurey🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n "
+        cap =  f"📂 Results For ➠ {search} \n\n👉🏻JOIN @rocktarstudiozrs For download Media File \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Type Only Movie Name With Correct Spelling.✍️\n➠ Add Year For Better Result and don't add movie or series words in qurey🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n "
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
